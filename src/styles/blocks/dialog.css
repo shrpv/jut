@@ -1,0 +1,7 @@
+/* Dialog */
+
+@media (width > 639px) {
+  .dialog__item {
+    min-height: 100%;
+  }
+}

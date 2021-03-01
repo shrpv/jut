@@ -1,0 +1,61 @@
+/* Answer */
+
+.answer {
+  position: relative;
+
+  display: block;
+}
+
+/* Input */
+
+.answer__input {
+  position: absolute;
+
+  margin: 0;
+  padding: 0;
+
+  appearance: none;
+}
+
+/* Text */
+
+.answer__text {
+  display: block;
+
+  text-align: center;
+  color: var(--color-white);
+
+  border: 1px solid var(--color-white);
+  border-radius: 45px;
+
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+@media (width <= 1023px) {
+  .answer__text {
+    padding: 9px 15px;
+
+    font-size: 12px;
+  }
+}
+
+@media (width > 1023px) {
+  .answer__text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 14px;
+  }
+}
+
+.answer__input:focus ~ .answer__text {
+  outline: 1px solid var(--color-supernova);
+}
+
+.answer__input:checked ~ .answer__text {
+  color: var(--color-black);
+
+  background-color: var(--color-white);
+}

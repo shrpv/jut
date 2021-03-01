@@ -1,0 +1,33 @@
+/* Textbox */
+
+.textbox {
+  display: block;
+  width: 100%;
+
+  line-height: 1.3;
+  font-family: inherit;
+  color: var(--color-black-32a);
+
+  background-color: var(--color-grey);
+  border: none;
+}
+
+@media (width <= 1023px) {
+  .textbox {
+    padding: 12px 14px;
+
+    font-size: 11px;
+
+    border-radius: 7px;
+  }
+}
+
+@media (width > 1023px) {
+  .textbox {
+    padding: 16px 28px;
+
+    font-size: 14px;
+
+    border-radius: 11px;
+  }
+}

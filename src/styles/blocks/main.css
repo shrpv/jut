@@ -1,0 +1,318 @@
+/* Main */
+
+.main {
+  position: relative;
+}
+
+@media (width <= 639px) {
+  .main {
+    padding-top: 234px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+  }
+}
+
+@media (width > 639px) {
+  .main {
+    min-height: 100vh;
+    padding-top: 10.6%;
+    padding-bottom: 4%;
+    padding-left: 6%;
+  }
+}
+
+@media (639px < width <= 1400px) {
+  .main {
+    overflow-x: hidden;
+  }
+}
+
+/* Animation */
+
+.main__animation {
+  position: absolute;
+  top: 0;
+
+  background-image: linear-gradient(45deg, #000000 25%, transparent 25%, transparent 50%, #000000 50%, #000000 75%, transparent 75%, transparent 100%);
+  background-position: 0 0;
+
+  animation-name: stripes;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@media (width <= 1023px) {
+  .main__animation {
+    right: 0;
+
+    width: 280px;
+    height: 160px;
+
+    background-size: 90px 90px;
+
+    animation-duration: 4s;
+
+    clip-path: polygon(0 65px, 65px 0, 100% 0, 100% 100%, 95px 100%);
+  }
+}
+
+@media (width > 1023px) {
+  .main__animation {
+    width: 814px;
+    height: 580px;
+
+    background-size: 240px 240px;
+
+    animation-duration: 2s;
+
+    clip-path: polygon(0 325px, 325px 0, 100% 0, 100% 100%, 255px 100%);
+  }
+}
+
+@media (1023px < width <= 1400px) {
+  .main__animation {
+    left: 586px;
+  }
+}
+
+@media (width > 1400px) {
+  .main__animation {
+    right: 0;
+  }
+}
+
+/* Bg */
+
+.main__bg {
+  position: absolute;
+}
+
+@media (width <= 1023px) {
+  .main__bg {
+    top: 58px;
+    right: 0;
+
+    width: 270px;
+    height: 231px;
+  }
+}
+
+@media (width > 1023px) {
+  .main__bg {
+    top: 187px;
+
+    width: 714px;
+    height: 611px;
+  }
+}
+
+@media (1023px < width <= 1400px) {
+  .main__bg {
+    left: 686px;
+  }
+}
+
+@media (width > 1400px) {
+  .main__bg {
+    right: 0;
+  }
+}
+
+/* Content */
+
+@media (639px < width <= 1023px) {
+  .main__content {
+    position: relative;
+
+    max-width: 360px;
+  }
+}
+
+@media (width > 1023px) {
+  .main__content {
+    max-width: 505px;
+  }
+}
+
+/* Logo */
+
+.main__logo {
+  display: inline-block;
+}
+.main__logo > img {
+  display: block;
+}
+
+@media (width <= 1023px) {
+  .main__logo {
+    width: 111px;
+    height: 37px;
+    margin-bottom: 26px;
+  }
+}
+
+@media (width > 1023px) {
+  .main__logo {
+    width: 126px;
+    height: 41px;
+    margin-bottom: 53px;
+    margin-left: 4px;
+  }
+}
+
+/* Title */
+
+.main__title {
+  margin: 0;
+
+  line-height: 1.2;
+}
+
+@media (width <= 1023px) {
+  .main__title {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+  }
+}
+@media (width > 1023px) {
+  .main__title {
+    margin-bottom: 21px;
+  
+    font-size: 50px;
+  }
+}
+
+/* Description */
+
+@media (width <= 639px) {
+  .main__description {
+    max-width: 440px;
+  }
+}
+
+@media (width <= 1023px) {
+  .main__description {
+    margin-bottom: 59px;
+  }
+}
+
+@media (width > 1023px) {
+  .main__description {
+    margin-bottom: 117px;
+  }
+}
+
+/* Paragraph */
+
+.main__paragraph {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-weight: 300;
+  line-height: 1.5;
+}
+.main__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 1023px) {
+  .main__paragraph {
+    font-size: 12px;
+  }
+}
+
+@media (width > 1023px) {
+  .main__paragraph {
+    font-size: 18px;
+  }
+}
+
+/* Actions */
+
+.main__actions {
+  display: grid;
+}
+
+@media (width <= 1023px) {
+  .main__actions {
+    column-gap: 15px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width > 1023px) {
+  .main__actions {
+    column-gap: 21px;
+  
+    grid-template-columns: 210px 210px;
+  }
+}
+
+/* Button */
+
+.main__button {
+  position: relative;
+}
+.main__button::before {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+
+  line-height: 1;
+
+  transform: translateX(-50%);
+}
+.main__button--buy::before {
+  content: "🙋‍♂️";
+}
+.main__button--reject::before {
+  content: "🤦‍♂️";
+}
+
+@media (width <= 1023px) {
+  .main__button::before {
+    bottom: 41px;
+  }
+  .main__button--buy::before {
+    font-size: 34px;
+  }
+  .main__button--reject::before {
+    font-size: 28px;
+  }
+}
+@media (width > 1023px) {
+  .main__button::before {
+    bottom: 62px;
+  }
+  .main__button--buy::before {
+    font-size: 52px;
+  }
+  .main__button--reject::before {
+    font-size: 44px;
+  }
+}
+
+@media (width <= 1023px) {
+  @keyframes stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 180px 0;
+    }
+  }
+}
+
+@media (width > 1023px) {
+  @keyframes stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 240px 0;
+    }
+  }
+}
